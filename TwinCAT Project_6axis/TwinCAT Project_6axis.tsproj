@@ -2938,7 +2938,7 @@ Bit1: Value smaller than Limit2]]>
 		<MappingInfo Identifier="{00000000-0050-0304-1000-010151000403}" Id="#x02030020"/>
 		<OwnerA Name="TIID^Device 2 (EtherCAT)">
 			<OwnerB Name="TIXC^MC_Cpp^MC_Cpp_Obj1 (Axis6)">
-				<Link VarA="Term 1 (EK1100)^Term 3 (EK1122)^Term 4 (EK1100)^Term 5 (EL2004)^Channel 2^Output" VarB="Outputs^led1"/>
+				<Link VarA="Term 1 (EK1100)^Term 3 (EK1122)^Term 4 (EK1100)^Term 5 (EL2004)^Channel 1^Output" VarB="Outputs^led1"/>
 			</OwnerB>
 		</OwnerA>
 		<OwnerA Name="TINC^NC-Task 1 SAF^Axes^Axis 6">
@@ -2958,9 +2958,6 @@ Bit1: Value smaller than Limit2]]>
 			</OwnerB>
 		</OwnerA>
 		<OwnerA Name="TIPC^MC^MC Instance">
-			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 1 (EK1100)^Term 3 (EK1122)^Term 4 (EK1100)^Term 5 (EL2004)">
-				<Link VarA="PlcTask Outputs^LED.LED1" VarB="Channel 1^Output"/>
-			</OwnerB>
 			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 1 (EK1100)^Term 3 (EK1122)^Term 4 (EK1100)^Term 6 (EL1008)">
 				<Link VarA="PlcTask Inputs^LED.SWITCH1" VarB="Channel 1^Input"/>
 			</OwnerB>
