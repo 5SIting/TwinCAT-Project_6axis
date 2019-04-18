@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+  <POU Name="MAIN" Id="{abf992aa-dddb-48a7-bdbf-e31cb92e034b}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	axis6: AXIS_REF;
+	Power: MC_Power;
+
+	power_do: BOOL;
+
+	move_r: MC_MoveRelative;
+	move_do: BOOL;
+	set_position:MC_SetPosition;
+	set_do: BOOL;
+	reset:MC_Reset;
+	reset_do: BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Power(
+	Axis:= axis6, 
+	Enable:= power_do, 
+	Enable_Positive:= TRUE, 
+	Enable_Negative:= TRUE, 
+	Override:= , 
+	BufferMode:= , 
+	Options:= , 
+	Status=> , 
+	Busy=> , 
+	Active=> , 
+	Error=> , 
+	ErrorID=> );
+
+move_r(
+	Axis:= axis6, 
+	Execute:= move_do, 
+	Distance:=360, 
+	Velocity:=60 , 
+	Acceleration:= 240, 
+	Deceleration:= 240, 
+	Jerk:= , 
+	BufferMode:= , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+set_position(
+	Axis:= axis6, 
+	Execute:= set_do, 
+	Position:= 0, 
+	Mode:= , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Error=> , 
+	ErrorID=> );
+reset(
+	Axis:=axis6 , 
+	Execute:= reset_do, 
+	Done=> , 
+	Busy=> , 
+	Error=> , 
+	ErrorID=> );]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="9" Count="11" />
+      <LineId Id="2" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="42" Count="14" />
+      <LineId Id="41" Count="0" />
+      <LineId Id="61" Count="8" />
+      <LineId Id="59" Count="0" />
+      <LineId Id="73" Count="5" />
+      <LineId Id="72" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+  <POU Name="LED" Id="{9bc604c0-6951-44a7-a871-5e08c40d8366}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM LED
+VAR
+	
+	LED1 AT%Q*: BOOL;
+	SWITCH1 AT%I*: BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF SWITCH1=1 THEN
+	LED1:=1;
+ELSE
+	LED1:=0;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="LED">
+      <LineId Id="34" Count="1" />
+      <LineId Id="37" Count="1" />
+      <LineId Id="36" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
